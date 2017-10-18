@@ -1,0 +1,12 @@
+<DockLayout stretchLastChild="true">
+  <Button dock="top" text="Add New Message" (tap)="addNewMessage()" class="btn btn-primary"></Button>
+  <Button dock="top" text="Remove Something" (tap)="removeSomething()" class="btn btn-primary"></Button>
+
+  <StackLayout>
+    <StackLayout *ngFor="let item of message" orientation="horizontal" @layoutTag>
+      <Label [text]="item.text" class="list-group-item" class="m-10"></Label>
+      <Label [text]="item.index" class="list-group-item"></Label>
+    </StackLayout>
+  </StackLayout>
+
+</DockLayout>

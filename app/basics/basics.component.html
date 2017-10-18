@@ -1,0 +1,25 @@
+<StackLayout>
+  <Label [@myAnimation]="fadeState" class="h1" [text]="'fade:' + fadeState"></Label>
+
+  <StackLayout orientation="horizontal">
+    <Button text="Fade In" (tap)="fadeIn()" class="btn btn-primary"></Button>
+    <Button text="Fade Out" (tap)="fadeOut()" class="btn btn-primary"></Button>
+    <Button text="Fade Toggle" (tap)="fadeToggle()" class="btn btn-primary"></Button>
+  </StackLayout>
+
+  <Label [@pingPongAnimation]="pingPongState" class="h1" [text]="pingPongState"></Label>
+  <StackLayout orientation="horizontal">
+    <Button text="Ping" (tap)="ping()" class="btn btn-primary"></Button>
+    <Button text="Pong" (tap)="pong()" class="btn btn-primary"></Button>
+  </StackLayout>
+
+  <GridLayout rows="auto, auto" columns="*, *, *, *, *" [@sizeAnimation]="size">
+    <Label row="0" col="2" class="h1 text-center" [text]="size"></Label>
+    <Button row="1" col="0" text="XS" (tap)="size = 'XS'" class="btn btn-primary"></Button>
+    <Button row="1" col="1" text="S" (tap)="size = 'S'" class="btn btn-primary"></Button>
+    <Button row="1" col="2" text="M" (tap)="size = 'M'" class="btn btn-primary"></Button>
+    <Button row="1" col="3" text="L" (tap)="size = 'L'" class="btn btn-primary"></Button>
+    <Button row="1" col="4" text="XL" (tap)="size = 'XL'" class="btn btn-primary"></Button>
+  </GridLayout>
+  
+</StackLayout>
