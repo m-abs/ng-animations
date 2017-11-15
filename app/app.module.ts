@@ -8,7 +8,8 @@ import { NativeScriptAnimationsModule } from 'nativescript-angular/animations';
 import { BasicsComponent } from './basics/basics.component';
 import { ListComponent } from './list/list.component';
 import { TagComponent } from './tag/tag.component';
-
+import { RootComponent } from './root.component';
+import { NewPageComponent } from './new-page.component';
 
 @NgModule({
     bootstrap: [
@@ -24,7 +25,9 @@ import { TagComponent } from './tag/tag.component';
         AppComponent,
         BasicsComponent,
         ListComponent,
-        TagComponent
+        TagComponent,
+        RootComponent,
+        NewPageComponent,
     ],
     schemas: [
         NO_ERRORS_SCHEMA

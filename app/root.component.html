@@ -1,0 +1,10 @@
+<GridLayout rows="auto, *" columns="*, *, *, *">
+  <Button row="0" col="0" text="Basics" [nsRouterLink]="['basics']"    class="btn btn-outline"></Button>
+  <Button row="0" col="1" text="List"   [nsRouterLink]="['list']"      class="btn btn-outline"></Button>
+  <Button row="0" col="2" text="Tag"    [nsRouterLink]="['tag']"       class="btn btn-outline"></Button>
+  <Button row="0" col="3" text="Page"   [nsRouterLink]="['/new-page']" class="btn btn-outline" pageTransition="slideTop"></Button>
+
+  <GridLayout row="1" colSpan="4" [@routeAnimation]="prepRouteState(routerOutlet)">
+    <router-outlet #routerOutlet="outlet"></router-outlet>
+  </GridLayout>
+</GridLayout>

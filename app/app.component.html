@@ -1,13 +1,1 @@
-<!-- https://docs.nativescript.org/angular/core-concepts/angular-navigation.html#page-router-outlet -->
-<!-- <router-outlet></router-outlet> -->
-
-<GridLayout rows="auto, *">
-  <StackLayout row="0" orientation="horizontal">
-    <Button text="Basics" [nsRouterLink]="['basics']" class="btn btn-outline"></Button>
-    <Button text="List" [nsRouterLink]="['list']" class="btn btn-outline"></Button>
-    <Button text="Tag" [nsRouterLink]="['tag']" class="btn btn-outline"></Button>
-  </StackLayout>
-  <GridLayout row="1" [@routeAnimation]="prepRouteState(routerOutlet)">      
-    <router-outlet #routerOutlet="outlet"></router-outlet>
-  </GridLayout>
-</GridLayout>
+<page-router-outlet></page-router-outlet>
